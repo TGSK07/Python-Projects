@@ -7,7 +7,7 @@ This is a simple Tic-Tac-Toe game built using Python's Tkinter module for the gr
 -- Interactive Multiplayer GUI game 
 -- Easy to play
 -- Annouce the winner
--- Add Restart button and back button 
+-- Also added Restart button and back button 
 
 
 ## Requirements
@@ -24,8 +24,14 @@ Make sure that the PNG image for the game icon and the Python file are in the sa
 
 
 ## Screenshot
-![Game Screenshot](screenshots\Home.png)
+![Game Screenshot](screenshots/Home.png)
+![Game Screenshot](screenshots/Board.png)
+![Game Screenshot](screenshots/Annoucement.png)
 
+## Future Advancements
+- **AI Opponent:** Implement an AI opponent using algorithms like Minimax for single-player mode.
+- **Score Tracking:** Add a feature to track the score of multiple games.
+- **Sound Effects:** Include sound effects for actions such as placing a mark or winning a game.
 
 ## Acknowledgments
 - Inspiration from classic Tic-Tac-Toe games.
@@ -34,3 +40,6 @@ Make sure that the PNG image for the game icon and the Python file are in the sa
 ---
 
 Feel free to modify the content as per your requirements.
+
+
+

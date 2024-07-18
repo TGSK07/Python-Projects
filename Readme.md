@@ -24,10 +24,8 @@ Make sure that the PNG image for the game icon and the Python file are in the sa
 
 
 ## Screenshot
-![Game Screenshot](screenshot.png)
+![Game Screenshot](screenshots\Home.png)
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 - Inspiration from classic Tic-Tac-Toe games.

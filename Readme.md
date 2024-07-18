@@ -7,6 +7,7 @@ This is a simple Tic-Tac-Toe game built using Python's Tkinter module for the gr
 -- Interactive Multiplayer GUI game 
 -- Easy to play
 -- Annouce the winner
+-- Add Restart button and back button 
 
 
 ## Requirements
@@ -21,12 +22,6 @@ Make sure that the PNG image for the game icon and the Python file are in the sa
 - `tic_tac_toe.py` - The main Python file containing the game code.
 - `game_icon.png` - The PNG image used as the game icon.
 
-## How to Play
-1. Run the game using the steps mentioned above.
-2. The game window will appear with a Tic-Tac-Toe board.
-3. Players take turns clicking on the cells to place their marks (X or O).
-4. The first player to get three of their marks in a row (horizontally, vertically, or diagonally) wins the game.
-5. If all the cells are filled without any player winning, the game ends in a draw.
 
 ## Screenshot
 ![Game Screenshot](screenshot.png)

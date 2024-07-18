@@ -4,10 +4,10 @@
 This is a simple Tic-Tac-Toe game built using Python's Tkinter module for the graphical user interface (GUI).
 
 ## Features
--- Interactive Multiplayer GUI game 
--- Easy to play
--- Annouce the winner
--- Also added Restart button and back button 
+- Interactive Multiplayer GUI game 
+- Easy to play
+- Annouce the winner
+- Also added Restart button and back button 
 
 
 ## Requirements

@@ -1,17 +1,21 @@
-from tkinter import *
+# Only import necessary classes from tkinter module
+from tkinter import Tk,PhotoImage,Frame,Button,Label
 
+# Design the Game window
 ttt = Tk()
 ttt.title('Tic Tac Toe')
 ttt.geometry('400x600')
 ttt.resizable(0,0)
-photo = PhotoImage(file = r"D:\Learning\Python\tic-tac-toe_39.png")
+photo = PhotoImage(file = "game_icon.png")
 ttt.iconphoto(True, photo)
-player1,player2,computer = 'X','O','O'
-turn = player1
+
+# set the default player as 'X' and create board
+turn = 'X'
 board = {2:' ',5:' ',8:' ',
          3:' ',6:' ',9:' ',
          4:' ',7:' ',0:' '}
 
+# To design the home page of the game
 def home():
     f0 = Frame(ttt,bg='#192A32')
     f0.place(x=0,y=0,width=400,height=600)
@@ -20,17 +24,19 @@ def home():
     exit_button = Button(f0,text='Exit',fg='#1F3540',bg='#31C4BE',font=('IMPACT',25),command=ttt.quit)
     exit_button.place(x=150,y=260,width=120,height=60)
 
-
+# To insert the player in board
 def insert(pos,player):
     global board
     board[pos] = player
 
+# To check whether the board is full or not
 def is_com():
     global board
     for i in board.keys():
         if board[i] not in ['X','O']:
             return 1
-        
+
+# to check the winner and if winner found return the player who win else return 'draw'     
 def is_winner():
     global board
     con = is_com()
@@ -53,13 +59,9 @@ def is_winner():
         if con != 1:
              
              return 'draw'
-        else:
-             return 0
+
     
-def smart_com():
-    max_player = computer
-    min_player = player1
-    
+# To Display the move on board to players.     
 def Game(event):
     global turn,board
     button = event.widget
@@ -67,16 +69,16 @@ def Game(event):
     pos = int(butto[-1])
     insert(pos,turn)
     
-    if turn==player1 and button["text"]==" ":
+    if turn=='X' and button["text"]==" ":
         button["fg"] = "#31C4BE"
         button['text'] = 'X'
-        turn=player2
+        turn='O'
 
     else:
         if button["text"]==" ":
             button["fg"] = "#F0B237"
             button['text']='O'
-            turn = player1
+            turn = 'X'
     con = is_com()
     if con == 1:
         winner=is_winner()
@@ -84,7 +86,7 @@ def Game(event):
             accouncement()
             
    
-    
+# GUI for Playing page    
 def Play():
     global board
     for i in board.keys():
@@ -137,9 +139,10 @@ def Play():
     restart = Button(f1,text='Restart',font=('Impact',30),fg='#192A32',bg='#A8BEC9',command=Play)
     restart.place(x=130,y=530,width=160,height=56)
 
+# To Display the winner
 def accouncement():
      global turn
-     turn = player1
+     turn = 'X'
      f3 = Frame(ttt,bg='#192A32')
      f3.place(x=0,y=0,width=400,height=600)
 
@@ -154,6 +157,7 @@ def accouncement():
      restart = Button(f3,text='Restart',font=('Impact',40),fg='#192A32',bg='#A8BEC9',command=Play)
      restart.place(x=115,y=300,width=190,height=55)
 
-home()
+if __name__=="__main__":
+    home()
 
-ttt.mainloop()
+ttt.mainloop() 
